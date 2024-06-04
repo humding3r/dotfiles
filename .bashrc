@@ -136,6 +136,7 @@ alias freshclam='sudo freshclam'
 alias vi='nvim'
 alias svi='sudo vi'
 alias vis='nvim "+set si"'
+alias py='python3'
 
 # Change directory aliases
 alias home='cd ~'
@@ -323,14 +324,19 @@ up() {
 	cd $d
 }
 
+# Use zoxide over cd
+alias cd="z"
+
+: '
 # Automatically do an ls after each cd, z, or zoxide
 cd() {
 	if [ -n "$1" ]; then
-		z "$@" && ls
+		builtin cd "$@" && ls
 	else
-		z ~ && ls
+		builtin cd ~ && ls
 	fi
 }
+'
 
 # Returns the last 2 fields of the working directory
 pwdtail() {
