@@ -67,7 +67,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # start dmoji (an emoji selector)
-bindsym $mod+Shift+d exec dmoji
+bindsym $mod+Shift+d exec emoji-picker
 
 # change focus
 bindsym $mod+h focus left
