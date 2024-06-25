@@ -6,5 +6,8 @@ funcsave -q py
 alias ls="ls --color -aF"
 funcsave -q ls
 
+# turn off greeting
+set fish_greeting
+
 zoxide init --cmd cd fish | source
 starship init fish | source
