@@ -4,6 +4,7 @@
 
 vim.opt.relativenumber = false -- Turn off relative numbering
 vim.opt.wrap = true -- Turn on autowrapping
+vim.b.autoformat = false -- Turn off autoformatting
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
