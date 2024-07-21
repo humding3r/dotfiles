@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false -- Turn off relative numbering
-vim.opt.wrap = true -- Turn on autowrapping
+vim.opt.wrap = false -- Turn off autowrapping
 vim.b.autoformat = false -- Turn off autoformatting
 
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
