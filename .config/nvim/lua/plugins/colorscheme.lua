@@ -1,12 +1,13 @@
 return {
-  -- add darkrose
+  -- add darkrose & catppuccin
   { "water-sucks/darkrose.nvim" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
-  -- Configure LazyVim to load darkrose
+  -- Configure LazyVim to load catppuccin
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "darkrose",
+      colorscheme = "catppuccin",
     },
   },
 }
