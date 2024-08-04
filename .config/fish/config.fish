@@ -16,6 +16,9 @@ set -Ux EDITOR nvim
 fish_add_path -g -p /usr/bin/flutter/bin
 fish_add_path -g -p $HOME/.pub-cache/bin
 
+# add nvim to path
+fish_add_path -g -p /opt/nvim-linux64/bin
+
 zoxide init --cmd cd fish | source
 starship init fish | source
 
