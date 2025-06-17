@@ -19,8 +19,17 @@ fish_add_path -g -p $HOME/.pub-cache/bin
 # add nvim to path
 fish_add_path -g -p /opt/nvim-linux64/bin
 
+# add pyenv to path
+set -Ux PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+
+# replace vim with nvim
+alias vim="nvim"
+funcsave -q vim
+
 zoxide init --cmd cd fish | source
 starship init fish | source
+pyenv init - fish | source
 
 function start_tmux
     if type tmux > /dev/null
