@@ -1,15 +1,18 @@
 return {
-  -- Disable autocompletion with <cr>
-  -- Autocomplete with Tab instead
-  {
     "hrsh7th/nvim-cmp",
-    opts = function(_, opts)
-      local cmp = require("cmp")
-      opts.mapping = vim.tbl_deep_extend("force", opts.mapping, {
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-        ["<S-Tab>"] = cmp.mapping.disable,
-        ["<CR>"] = cmp.config.disable,
-      })
+    opts = function()
+        local cmp = require("cmp")
+        local conf = require("nvchad.configs.cmp")
+
+        local mymappings = {
+            ["<Up>"] = cmp.mapping.select_prev_item(),
+            ["<Down>"] = cmp.mapping.select_next_item(),
+            ["<Tab>"] = cmp.mapping.confirm {
+                behavior = cmp.ConfirmBehavior.Replace,
+                select = true,
+            },
+        }
+        conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
+        return conf
     end,
-  },
 }
