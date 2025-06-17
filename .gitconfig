@@ -1,8 +1,5 @@
 [init]
 	defaultBranch = main
-[user]
-	email = jetgeronimo@gmail.com
-	name = Humding3r
 [diff]
     tool = difftastic
 [difftool]
@@ -14,3 +11,11 @@
 [alias]
     dft = difftool
     dlog = "-c diff.external=difft log -p --ext-diff"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	email = jetgeronimo@gmail.com
+	name = Humding3r
