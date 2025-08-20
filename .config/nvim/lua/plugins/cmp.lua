@@ -5,6 +5,7 @@ return {
         local conf = require("nvchad.configs.cmp")
 
         local mymappings = {
+            ["<CR>"] = cmp.config.disable,
             ["<Up>"] = cmp.mapping.select_prev_item(),
             ["<Down>"] = cmp.mapping.select_next_item(),
             ["<Tab>"] = cmp.mapping.confirm {
